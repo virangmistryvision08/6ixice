@@ -1,14 +1,15 @@
 require("dotenv").config();
-require("./config/dbConnect");
+
+require("./config/dbConnect.js");
 const express = require("express");
 const app = express();
-const port = +process.env.PORT;
+const PORT = process.env.PORT || 4000;
+const router = require("./routes/index.js");
 const productRoute = require("./routes/productRoute");
 
-app.use(express.json());
+app.use("/api", router);
+app.use("/api/product", productRoute);
 
-app.use("/api", productRoute);
-
-app.listen(port, () => {
-  console.log("Server Started At PORT -", port);
+app.listen(PORT, () => {
+  console.log(`Server started at ${PORT}`);
 });

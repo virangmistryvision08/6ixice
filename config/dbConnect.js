@@ -1,10 +1,10 @@
 const mongoose = require("mongoose");
-
+const { MONGO_URL } = process.env;
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(MONGO_URL)
   .then(() => {
-    console.log("Database Connected.");
+    console.log("Connected to Database!");
   })
   .catch((error) => {
-    console.log("Database Connection Error!", error);
+    console.log(error);
   });
