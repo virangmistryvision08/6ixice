@@ -1,0 +1,21 @@
+{
+  "name": "scrapping-6ixice's-products",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^8.20.4",
+    "nodemon": "^3.1.11",
+    "puppeteer": "^24.34.0"
+  }
+}
